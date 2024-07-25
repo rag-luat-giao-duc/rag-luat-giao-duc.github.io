@@ -1,0 +1,111 @@
+.input__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  min-height: 36px;
+  border-radius: 24px;
+  background: var(--white);
+  padding: 8px 14px 8px 18px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.suggestions__wrapper {
+  appearance: none; /* Removes default appearance */
+  border: none; /* Removes border */
+  background-color: transparent; /* Makes background transparent */
+  padding: 0; /* Removes default padding */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Shows cursor as pointer when hovering */
+  outline: none; /* Removes focus outline */
+  
+  /* Italicize text */
+  font-style: italic;
+  
+  /* Apply slight blur */
+  filter: blur(0.5px);
+}
+
+.suggestions__wrapper option {
+  /* Styles for each option if needed */
+  padding: 8px 12px; /* Example padding */
+  background-color: white; /* Example background color */
+}
+
+/* Example styling for selected option */
+.suggestions__wrapper option:checked {
+  background-color: lightblue; /* Example selected background color */
+}
+
+
+.suggestions {
+    position: absolute;
+    list-style-type: none;
+    background-color: var(--primary-bg);
+    text-align: left;
+    line-height: 30px;
+    width: 20%;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.suggestions li:hover {
+    padding: 5px;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.input__use__model{
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+  background-color: var(--primary-bg);
+  color: var(--primary);
+  padding: 10px;
+  border-radius: 30px;
+  margin-right: 10px;
+  min-width: max-content;
+}
+
+.input__use__model .input__use__model__close{
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.input__send {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 11px 10px 9px;
+  transition: background 0.3s ease;
+}
+.input__send:hover {
+  background: var(--primary-bg);
+}
+
+.send_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: var(--text-color-primary);
+}
+.input--shrunk {
+  width: calc(100% - 42px);
+}
