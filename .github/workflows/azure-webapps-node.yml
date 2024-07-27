@@ -50,7 +50,7 @@ jobs:
 
     - name: Create zip archive
       run: |
-        zip -r node-app.zip .
+        zip -r node-app.zip . -x "*.git*" "node_modules/*" "coverage/*"
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
@@ -84,4 +84,4 @@ jobs:
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        package: .
